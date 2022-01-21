@@ -1,0 +1,18 @@
+{
+    "binary search": {
+        "prefix": "binary search",
+        "body": [
+            "bool f(int mid){\r",
+            "    // function to checck the  condition\r",
+            "}\r",
+            "int binSearch(int l, int r) {\r",
+            "    int mid = (l+r)/2;\r",
+            "    if (l==r) return l;\r",
+            "    if (f(mid)) return binSearch(l, mid);\r",
+            "    else return binSearch(mid+1, r);\r",
+            "}\r",
+            ""
+        ],
+        "description": "binary search"
+    }
+}

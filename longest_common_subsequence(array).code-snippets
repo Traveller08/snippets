@@ -1,0 +1,16 @@
+{
+    "longest increasing subsequence (array)": {
+        "prefix": "lis(array)",
+        "body": [
+            "   vector<int> ans;\r",
+            "for (auto x : A) {\r",
+            "    auto it = lower_bound(ans.begin(), ans.end(), x);\r",
+            "    if (it == ans.end())\r",
+            "        ans.push_back(x);\r",
+            "    else\r",
+            "        *it = x;\r",
+            "}"
+        ],
+        "description": "longest increasing subsequence (array)"
+    }
+}

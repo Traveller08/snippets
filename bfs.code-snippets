@@ -1,0 +1,36 @@
+{
+	"default": {
+		"prefix": [
+			"make_graph_bfs"
+		],
+	"body": [
+		
+		"void solve()",
+		"   {",
+		"       ni2(n,m);",
+		"ll gragh_size=n+100;",
+        "vl adj[graph_size];",
+		"bool vis[graph_size]={};",
+		"vl dis(graph_size,INT_MAX);",
+		"queue<ll>q;",
+		"rep(i,0,m,1){",
+			   "ni2(p,q);",
+				"adj[p].pb(q);",
+				"adj[q].pb(p);",
+			  " }",
+		"   }",
+		"q.push(/*starting point*/);",
+		"vis[/*staring point*/]=true;",
+		"while(!q.empty()){",
+			"ll v=q.front();",
+			"q.pop();",
+			"for(auto u:adj[v]){",
+				"if(!vis[u]){",
+					"vis[u]=true;",
+					"q.push(u);",
+				"}",
+			"}",
+		"}",
+	],
+	}
+}

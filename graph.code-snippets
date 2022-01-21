@@ -1,0 +1,30 @@
+{
+	"default": {
+		"prefix": [
+			"make_graph_dfs"
+		],
+	"body": [
+"ll gragh_size=200005;",
+"vl adj[graph_size];",
+"bool vis[graph_size];",
+"void dfs(ll v)",
+"{",
+"\t\tvis[v]=true;",
+"\tfor(auto x:adj[v]){",
+"\t\tif(!vis[x]){",
+"\t\t\tdfs(x);",
+"\t\t\t}",
+"\t\t}",
+"}",
+"void solve()",
+"{",
+"\t\tni2(n,m);",
+"\t\t\trep(i,0,m,1){",
+"\t\t\tni2(p,q);",
+"\t\t\tadj[p].pb(q);",
+"\t\t\tadj[q].pb(p);",
+"\t\t\t}",
+"}",
+	],
+	}
+}

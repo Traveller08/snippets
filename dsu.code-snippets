@@ -1,0 +1,31 @@
+{
+    "dsu": {
+        "prefix": "dsu",
+        "body": [
+            "#define maxsize 200100\r",
+            "vl parent(maxsize),ranks(maxsize);\r",
+            "int find_set(int v) {\r",
+            "    if (v == parent[v])\r",
+            "        return v;\r",
+            "    return parent[v] = find_set(parent[v]);\r",
+            "}\r",
+            "void make_set(int v) {\r",
+            "    parent[v] = v;\r",
+            "    rank[v] = 0;\r",
+            "}\r",
+            "\r",
+            "void union_sets(int a, int b) {\r",
+            "    a = find_set(a);\r",
+            "    b = find_set(b);\r",
+            "    if (a != b) {\r",
+            "        if (rank[a] < rank[b])\r",
+            "            swap(a, b);\r",
+            "        parent[b] = a;\r",
+            "        if (rank[a] == rank[b])\r",
+            "            rank[a]++;\r",
+            "    }\r",
+            "}"
+        ],
+        "description": "dsu"
+    }
+}

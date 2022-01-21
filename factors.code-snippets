@@ -1,0 +1,23 @@
+{
+	"default": {
+		"prefix": [
+			"prime_sieve"
+		],
+	"body": [
+		"vector<bool>prime(siz2,false)",
+		"void sieve()",
+		"{",
+		"rep(i,2,1010,1)",
+			"{",
+			"if(prime[i]==false)",
+				"{",
+					"rep(j,i*i,siz2,i)",
+					"{",
+						"prime[j]=true;",
+					"}",
+				"}",
+			"}",
+		"}",
+	],
+	}
+}

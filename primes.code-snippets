@@ -1,0 +1,23 @@
+{
+    "primes": {
+        "prefix": "primes_list",
+        "body": [
+            "#define MAXPR 10000\r",
+            "bool sieve[MAXPR];\r",
+            "vector<int> primes;\r",
+            "void calcPrimes() {\r",
+            "    for (int i = 2; i < MAXPR; i++) {\r",
+            "        if (!sieve[i])\r",
+            "            primes.push_back(i);\r",
+            "        for (int j = 0; j < primes.size() && i * primes[j] < MAXPR; j++) {\r",
+            "            sieve[primes[j] * i] = true;\r",
+            "            if (i % primes[j] == 0)\r",
+            "                break;\r",
+            "        }\r",
+            "    }\r",
+            "}\r",
+            ""
+        ],
+        "description": "list of all primes upto MAXPR"
+    }
+}

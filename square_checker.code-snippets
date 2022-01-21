@@ -1,0 +1,15 @@
+{
+	"default": {
+		"prefix": [
+			"power"
+		],
+	"body": [
+		"bool per_sq_checker(ll a)",
+"{",
+    "ll ans=ceil(float(sqrt(a)));",
+	"if(ans*ans==a)return true;",
+	"else return false;",
+"}",
+	],
+	}
+}
