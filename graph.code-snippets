@@ -4,9 +4,8 @@
 			"make_graph_dfs"
 		],
 	"body": [
-"ll gragh_size=200005;",
-"vl adj[graph_size];",
-"bool vis[graph_size];",
+"vector<vl>adj;",
+"vector<bool>vis;",
 "void dfs(ll v)",
 "{",
 "\t\tvis[v]=true;",
@@ -19,6 +18,8 @@
 "void solve()",
 "{",
 "\t\tni2(n,m);",
+"\t\tadj=vector<vl>(n+1,vl());",
+"\t\tvis=vector<bool>vis(n+1);",
 "\t\t\trep(i,0,m,1){",
 "\t\t\tni2(p,q);",
 "\t\t\tadj[p].pb(q);",

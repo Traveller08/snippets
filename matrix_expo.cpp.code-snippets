@@ -1,0 +1,41 @@
+{
+	"matrix expo": {
+	"prefix": "matrix_exponentiation",
+	"body": [
+	  "void mul(vector<vl>&m1,vector<vl>&m2,ll n,ll m){",
+	  "        vector<vl>ans(n,vl(n));",
+	  "        rep(i,0,n,1){",
+	  "            rep(j,0,m,1){",
+	  "                 rep(k,0,m,1){",
+	  "                     ans[i][j]=mod_add(ans[i][j],mod_mul(m1[i][k],m2[k][j],mod),mod);",
+	  "                 }",
+	  "            }",
+	  "        }",
+	  "",
+	  "        m1=ans;",
+	  "}",
+	  "void pw(vector<vl>&m1,ll n,ll m,ll k){",
+	  "       vector<vl>I(n,vl(m));",
+	  "       rep(i,0,n,1){",
+	  "           rep(j,0,m,1){",
+	  "               if(i==j)I[i][j]=1;",
+	  "               else I[i][j]=0;",
+	  "           }",
+	  "       }",
+	  "     ",
+	  "      ",
+	  "     while(k>0){",
+	  "            if(k&1){",
+	  "                mul(I,m1,n,m);",
+	  "                k--;",
+	  "            }else{",
+	  "                k/=2;",
+	  "                mul(m1,m1,n,m);",
+	  "            }",
+	  "     }",
+	  "     m1=I;",
+	  "}"
+	],
+	"description": ""
+  }
+}

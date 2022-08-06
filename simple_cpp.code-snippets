@@ -1,0 +1,19 @@
+{
+	"simplest c++ code template": {
+		"prefix": "simple_cpp",
+		"body": [
+		"#include <bits/stdc++.h>",
+		"using namespace std;",
+		"#define ll int64_t",
+		"",
+		"int main(){",
+		"  int t=1;",
+		"  cin>>t;",
+		"  while(t--){",
+		"    ",
+		"  }",
+		"}"
+		],
+		"description": "simplest c++ code template"
+    }
+}
